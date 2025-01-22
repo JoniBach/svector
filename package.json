@@ -34,7 +34,7 @@
 		"url": "git+https://github.com/JoniBach/svector.git"
 	},
 	"peerDependencies": {
-		"svelte": "^5.0.0"
+		"svelte": ">=4.0.0"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
