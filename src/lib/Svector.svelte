@@ -4,7 +4,6 @@
 	import Frame from './Frame.svelte';
 
 	export let file;
-	export let id;
 
 	export let width = '500px';
 	export let height = '500px';
@@ -487,34 +486,6 @@
 			});
 			boundingBoxOps.updateGuideBoxForSelection(selectedGroups);
 			project.view.draw();
-		}
-	};
-
-	/* =====================================================
-        GENERATION OPS
-    ======================================================= */
-	const generationOps = {
-		async generateImage() {
-			const promptText = prompt('Enter a prompt for image generation:');
-			if (promptText !== null) {
-				// eventDispatcher('generateImage', { prompt: promptText });
-
-				try {
-					const response = await fetch(`/api/ai/svg`, {
-						method: 'post',
-						headers: {
-							'Content-Type': 'application/json'
-						},
-						body: JSON.stringify({ prompt: promptText, projectId: id })
-					});
-					const result = await response.json();
-					fileOps.addFile(result.svg, [500, 500]);
-					console.log('Success:', result);
-					return result;
-				} catch (error) {
-					console.error('Error:', error);
-				}
-			}
 		}
 	};
 
