@@ -11,6 +11,7 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint ."
 	},
+	"author": "JoniBach",
 	"files": [
 		"dist",
 		"!dist/**/*.test.*",
@@ -27,6 +28,10 @@
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
 		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JoniBach/svector.git"
 	},
 	"peerDependencies": {
 		"svelte": "^5.0.0"
