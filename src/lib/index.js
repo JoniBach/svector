@@ -1,2 +1,2 @@
 // Reexport your entry components here
-export { Canvas } from './Canvas';
+export { Canvas as Svector } from './Canvas';
