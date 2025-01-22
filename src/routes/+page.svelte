@@ -1,5 +1,5 @@
 <script>
-	import Canvas from '$lib/Canvas.svelte';
+	import { Svector } from '$lib';
 	export let data;
 	let file = '';
 	let id;
@@ -33,7 +33,7 @@
 </script>
 
 <div class="create-page-container">
-	<Canvas on:save={handleSave} {file} {id} {actions} />
+	<Svector on:save={handleSave} {file} {id} {actions} />
 </div>
 
 <style>

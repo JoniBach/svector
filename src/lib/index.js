@@ -1,2 +1,2 @@
-// Reexport your entry components here
-export { Canvas as Svector } from './Canvas';
+import Svector from './Svector.svelte';
+export { Svector };
